@@ -1,0 +1,259 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+.back {
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.425);
+	top: 0;
+	position: fixed;
+	transition: 1s;
+}
+
+.hide-bg {
+	display: none;
+}
+
+.show-bg {
+	display: block;
+}
+
+:root {
+    --main-color: rgb(95, 123, 245);
+}
+
+.btn {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 16px;
+}
+
+.btn__primary {
+    background: var(--main-color);
+    color: white;
+    border: none;
+    border: 1px solid transparent;
+}
+
+.btn__primary:hover {
+    color: rgb(95, 123, 245);
+    background: white;
+    border: rgb(95, 123, 245) solid 1px;
+}
+
+.btn__primary:active {
+    transform: scale(1.1);
+}
+
+.menu__nav {
+    z-index: 100;
+    transition: 0.4s;
+    position: relative;
+}
+
+.menu__nav nav ul {
+    list-style: none;
+    color: var(--main-color);
+}
+
+.open-menu {
+    transform: translateX(350px);
+}
+
+.hide-button {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .hide-button {
+        display: block;
+        position: absolute;
+        margin: auto;
+        width: 50px;
+        height: 50px;
+        font-size: 35px;
+        right: -60px;
+        display: flex;
+        justify-content: center;
+        border-radius: 100%;
+        top: 0;
+        bottom: 100px;
+        color: var(--main-color);
+        background: white;
+        cursor: pointer;
+    }
+
+    .menu-btn {
+        font-size: 35px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+        color: var(--main-color);
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.4s;
+		position: fixed;
+    }
+
+    .menu-btn:hover {
+        background: rgba(252, 252, 252, 0.589);
+    }
+
+    .menu__nav {
+        position: fixed;
+        height: 100vh;
+        width: 250px;
+        background: rgb(255, 255, 255);
+        top: 0;
+        left: -350px;
+        transition: 0.4s;
+    }
+
+    .menu__nav nav {
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+        justify-content: center;
+    }
+
+    .menu__nav nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 250px;
+        width: 210px;
+    }
+
+    .home-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+		justify-content: center;
+        height: 90vh;
+        width: 100vw;
+        background: rgb(255, 255, 255);
+        transition: 0.4s;
+    }
+
+    .home__img {
+        width: 80%;
+        height: 200px;
+        object-fit: contain;
+    }
+
+    .home__img img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .home__pattern {
+        position: absolute;
+        top: 0px;
+        opacity: 0.2;
+        right: 20px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .home__pattern img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .home__info {
+        width: 100%;
+        height: 120px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info__text {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home__name {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .home__name span {
+        background: rgba(128, 128, 128, 0.705);
+        padding: 5px 10px;
+        color: white;
+        border-radius: 10px;
+    }
+
+	.home__icons {
+		width: 150px;
+		display: flex;
+		justify-content: space-between;
+		font-size: 35px;
+		position: relative;
+		top: 20px;
+		color: var(--main-color);
+		animation: 1s ease-in-out infinite show-icon1;
+	}
+
+	/* skills */
+
+	.skills-container {
+		display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 90vh;
+        width: 100vw;
+        background: rgb(255, 255, 255);
+        transition: 0.4s;
+	}
+
+	.skills__text {
+		font-size: 30px;
+	}
+
+	.skills__cards {
+		width: 350px;
+		height: 200px;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.skill__card {
+		width: 50px;
+		height: 50px;
+		border-radius: 100%;
+		padding: 5px;
+		margin: 20px;
+		background: rgb(255, 255, 255);
+	}
+
+	.skill__card img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+
+}
